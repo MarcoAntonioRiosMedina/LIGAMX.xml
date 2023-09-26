@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE partido [
+<!ELEMENT partido (fecha, equipos, marcador, goles?)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT equipos (equipo+)>
+<!ELEMENT equipo (#PCDATA)>
+<!ELEMENT marcador (equipo, goles)>
+<!ELEMENT goles (goles+)>
+<!ELEMENT jugador (#PCDATA)>
+<!ELEMENT minuto (#PCDATA)>
+]>
+<partido>
+  <fecha>2023-09-18</fecha>
+  <equipos>
+    <equipo>Pachuca</equipo>
+    <equipo>Santos</equipo>
+  </equipos>
+  <marcador>
+    <equipo>Pachuca</equipo>
+    <goles>3</goles>
+  </marcador>
+  <marcador>
+    <equipo>Santos</equipo>
+    <goles>2</goles>
+  </marcador>
+  <goles>
+    <jugador>Marino Hinestroza</jugador>
+    <minuto>45</minuto>
+  </goles>
+  <goles>
+    <jugador>Bryan González</jugador>
+    <minuto>69</minuto>
+  </goles>
+  <goles>
+    <jugador>Illian Hernández</jugador>
+    <minuto>90</minuto>
+  </goles>
+  <goles>
+    <jugador>Juan Brunetta</jugador>
+    <minuto>56</minuto>
+  </goles>
