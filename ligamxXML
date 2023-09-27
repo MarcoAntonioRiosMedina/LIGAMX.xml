@@ -1,41 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE partido [
-<!ELEMENT partido (fecha, equipos, marcador, goles?)>
-<!ELEMENT fecha (#PCDATA)>
-<!ELEMENT equipos (equipo+)>
-<!ELEMENT equipo (#PCDATA)>
-<!ELEMENT marcador (equipo, goles)>
-<!ELEMENT goles (goles+)>
-<!ELEMENT jugador (#PCDATA)>
-<!ELEMENT minuto (#PCDATA)>
-]>
-<partido>
-  <fecha>2023-09-18</fecha>
-  <equipos>
-    <equipo>Pachuca</equipo>
-    <equipo>Santos</equipo>
-  </equipos>
-  <marcador>
-    <equipo>Pachuca</equipo>
-    <goles>3</goles>
-  </marcador>
-  <marcador>
-    <equipo>Santos</equipo>
-    <goles>2</goles>
-  </marcador>
-  <goles>
-    <jugador>Marino Hinestroza</jugador>
-    <minuto>45</minuto>
-  </goles>
-  <goles>
-    <jugador>Bryan González</jugador>
-    <minuto>69</minuto>
-  </goles>
-  <goles>
-    <jugador>Illian Hernández</jugador>
-    <minuto>90</minuto>
-  </goles>
-  <goles>
-    <jugador>Juan Brunetta</jugador>
-    <minuto>56</minuto>
-  </goles>
+<!DOCTYPE resultados [
+        <!ELEMENT resultados (partido+)>
+        <!ELEMENT partido (fecha, equipos, marcador, goles)>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT equipos (local, visitante)>
+        <!ELEMENT local (#PCDATA)>
+        <!ELEMENT visitante (#PCDATA)>
+        <!ELEMENT marcador (#PCDATA)>
+        <!ELEMENT goles (gol+)>
+        <!ELEMENT gol (jugador, minuto)>
+        <!ELEMENT jugador (#PCDATA)>
+        <!ELEMENT minuto (#PCDATA)>
+        ]>
+<resultados>
+    <partido>
+        <fecha>18 de septiembre de 2023</fecha>
+        <equipos>
+            <local>Santos Laguna</local>
+            <visitante>Pachuca</visitante>
+        </equipos>
+        <marcador>3-2</marcador>
+        <goles>
+            <gol>
+                <jugador>Marino Hinestroza</jugador>
+                <minuto>47</minuto>
+            </gol>
+            <gol>
+                <jugador>Juan Brunetta</jugador>
+                <minuto>56</minuto>
+            </gol>
+            <gol>
+                <jugador>Bryan González</jugador>
+                <minuto>69</minuto>
+            </gol>
+            <gol>
+                <jugador>Illian Hernandez</jugador>
+                <minuto>92</minuto>
+            </gol>
+            <gol>
+                <jugador>Félix Torres</jugador>
+                <minuto>94</minuto>
+            </gol>
+        </goles>
+    </partido>
+</resultados>
